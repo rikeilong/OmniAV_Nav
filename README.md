@@ -35,7 +35,7 @@ Download the [checkpoint](https://drive.google.com/drive/folders/1t01cMS0E_aHBKx
 ```bash
 export SOUND_SPACES_ROOT=/absolute/path/to/sound-spaces
 export AVN_DATA_ROOT="$SOUND_SPACES_ROOT/data"
-export RAO_NAV_LOCALIZATION_CKPT="$SOUND_SPACES_ROOT/RAO-Nav-Inference-GitHub/weights/localization_expert_qwen_best.pt"
+export RAO_NAV_LOCALIZATION_CKPT="$SOUND_SPACES_ROOT/OmniAV_Nav/weights/localization_expert_qwen_best.pt"
 export QWEN_MODEL_DIR="$SOUND_SPACES_ROOT/data/models/Qwen2.5-Omni-7B"
 export QWEN_OMNI_URL=http://127.0.0.1:6006/v1/omni/inference
 ```
@@ -50,7 +50,7 @@ Terminal 1, Qwen2.5-Omni environment:
 
 ```bash
 conda activate rao-qwen
-cd ./RAO-Nav-Inference-GitHub
+cd ./OmniAV_Nav
 QWEN_MODEL_DIR=./Qwen2.5-Omni-7B \
 QWEN_CUDA_VISIBLE_DEVICES=0 \
 ./scripts/start_qwen_server.sh
@@ -60,7 +60,7 @@ Terminal 2, SoundSpaces environment:
 
 ```bash
 conda activate ss
-cd ./RAO-Nav-Inference-GitHub
+cd ./OmniAV_Nav
 SOUND_SPACES_ROOT=./sound-spaces \
 AVN_DATA_ROOT=./sound-spaces/data \
 NAV_CUDA_VISIBLE_DEVICES=1 \
