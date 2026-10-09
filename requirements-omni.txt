@@ -1,0 +1,7 @@
+accelerate>=1.2
+fastapi==0.115.11
+numpy>=2.0
+Pillow>=11.0
+qwen-omni-utils==0.0.9
+transformers==4.57.0
+uvicorn==0.34.0

@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+set -eu
+
+REPO_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+SOUND_SPACES_ROOT=${SOUND_SPACES_ROOT:-$(dirname "$REPO_ROOT")}
+OMNI_PYTHON=${OMNI_PYTHON:-python}
+QWEN_CUDA_VISIBLE_DEVICES=${QWEN_CUDA_VISIBLE_DEVICES:-0}
+QWEN_DEVICE=${QWEN_DEVICE:-cuda:0}
+
+export SOUND_SPACES_ROOT
+export PYTHONPATH="$REPO_ROOT:$SOUND_SPACES_ROOT:${PYTHONPATH:-}"
+export CUDA_VISIBLE_DEVICES="$QWEN_CUDA_VISIBLE_DEVICES"
+export QWEN_DEVICE
+
+exec "$OMNI_PYTHON" -m rao_nav_inference.online_qwen "$@"
