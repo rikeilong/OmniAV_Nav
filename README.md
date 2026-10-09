@@ -18,6 +18,10 @@
 We explore whether Omni-Language Models (OLMs) can be directly applied to zero-shot Semantic Audio-Visual Navigation (SAVN). In this paper, we
 introduce RAO-Nav, short for Reasoning All-in-One OLM, a deployment pipeline for zero-shot SAVN. By leveraging the rich implicit audio-visual knowledge encoded in OLMs, the embodied agent is enabled to “hear”, “see”, “reason”, and “act” in the environment. To further elicit the built-in thinking ability of OLMs, we propose a test-time Latent Navigation Reasoning (LNR) module that can be seamlessly integrated into the decoding space.
 
+<a href="assets/framework.pdf">
+  <img src="assets/framework.png" alt="RAO-Nav Framework" width="100%">
+</a>
+
 
 ## 📦 Installation
 
