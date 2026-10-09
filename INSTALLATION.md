@@ -114,7 +114,7 @@ conda activate rao-qwen
 python -m pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 \
   --index-url https://download.pytorch.org/whl/cu124
 python -m pip install -r \
-  /absolute/path/to/sound-spaces/OmniAV_Nav-GitHub/requirements-omni.txt
+  /absolute/path/to/sound-spaces/OmniAV_Nav/requirements-omni.txt
 ```
 
 The tested Qwen environment uses Python 3.10, PyTorch 2.6.0 with CUDA 12.4, Transformers 4.57.0, qwen-omni-utils 0.0.9, FastAPI 0.115.11, and Uvicorn 0.34.0. Change the PyTorch wheel only when required by your driver.
@@ -136,7 +136,7 @@ Set environment variables in both terminals, or add them to your shell profile:
 ```bash
 export SOUND_SPACES_ROOT=/absolute/path/to/sound-spaces
 export AVN_DATA_ROOT="$SOUND_SPACES_ROOT/data"
-export RAO_NAV_LOCALIZATION_CKPT="$SOUND_SPACES_ROOT/OmniAV_Nav-GitHub/weights/localization_expert_qwen_best.pt"
+export RAO_NAV_LOCALIZATION_CKPT="$SOUND_SPACES_ROOT/OmniAV_Nav/weights/localization_expert_qwen_best.pt"
 export QWEN_MODEL_DIR="$SOUND_SPACES_ROOT/data/models/Qwen2.5-Omni-7B"
 export QWEN_OMNI_URL=http://127.0.0.1:6006/v1/omni/inference
 ```
@@ -145,7 +145,7 @@ Validate the resolved paths:
 
 ```bash
 conda activate ss
-cd /absolute/path/to/sound-spaces/OmniAV_Nav-GitHub
+cd /absolute/path/to/sound-spaces/OmniAV_Nav
 python - <<'PY'
 from rao_nav_inference import paths
 for name in (
