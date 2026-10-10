@@ -29,7 +29,6 @@ Follow the [installation guide](INSTALLATION.md) to set up the environment and p
 
 ## Localization Expert checkpoint
 
-Download the checkpoint from the permanent Zenodo record after it is published:
 Download the [checkpoint](https://drive.google.com/drive/folders/1t01cMS0E_aHBKxfWHRsRpKqAtfuwN2fm?usp=sharing) and place it in the `weights` folder.
 
 ## Path configuration
